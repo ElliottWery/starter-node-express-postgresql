@@ -1,4 +1,5 @@
-// Update with your config settings.
+  require("dotenv").config();
+  const { DATABASE_URL } = process.env;
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -8,5 +9,6 @@
   development: {
     client: "postgresql",
     connection: "",
+    connection: DATABASE_URL,
   },
 };
